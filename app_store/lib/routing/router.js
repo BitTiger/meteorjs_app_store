@@ -23,6 +23,6 @@ Router.route('/app/:_id', {
         Meteor.subscribe('singleApp', this.params._id);
     },
     data: function () {
-        return Apps.find({});
+        return Apps.findOne(this.params._id);
     }
 });

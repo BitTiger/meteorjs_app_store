@@ -44,3 +44,24 @@
 .nameColumn {
     margin-top: 7px;
 }
+
+.appTitle {
+    font-size:18px;
+    margin-top:5px;
+}
+
+.appInfo {
+    height: 150px;
+}
+
+.ratingsArea{
+    display:flex;
+    position:absolute;
+    bottom:0;
+}
+
+.appPageContent{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+}

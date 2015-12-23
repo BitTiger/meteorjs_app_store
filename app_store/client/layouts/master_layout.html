@@ -1,7 +1,11 @@
 <template name="masterLayout">
 
     <div class="container">
-        {{> yield }}
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 mainContainer">
+                 {{> yield }}
+            </div>
+        </div>
     </div>
 
 </template>

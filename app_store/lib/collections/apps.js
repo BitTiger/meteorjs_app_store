@@ -14,8 +14,8 @@ Schemas.Apps = new SimpleSchema({
     'description': {
         type: String
     },
-    'category': {
-      type: String
+    'rank': {
+        type: Number
     },
     'avgRating': {
         type: Number,
@@ -31,15 +31,12 @@ Schemas.Apps = new SimpleSchema({
     'reccomendedApps': {
         type: [Object]
     },
-    "reccomendedApps.name": {
+    "reccomendedApps.$.name": {
         type: String
     },
-    "reccomendedApps.iconUrl": {
+    "reccomendedApps.$.iconUrl": {
         type: String,
         regEx: SimpleSchema.RegEx.Url
-    },
-    "reccomendedApps.category": {
-        type: String
     }
 });
 

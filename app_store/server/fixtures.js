@@ -2,46 +2,6 @@
  * Created by Steve Kehoe on 9/21/2015.
  */
 
-Schemas.Apps = new SimpleSchema({
-    'name': {
-        type: String
-    },
-    'developer': {
-        type: String
-    },
-    'description': {
-        type: String
-    },
-    'category': {
-        type: String
-    },
-    'avgRating': {
-        type: Number
-    },
-    'numberOfRatings': {
-        type: Number
-    },
-    'numberOfDownloads': {
-        type: Number
-    },
-    'iconUrl': {
-        type: String,
-        regEx: SimpleSchema.RegEx.Url
-    },
-    'reccomendedApps': {
-        type: [Object]
-    },
-    "reccomendedApps.name": {
-        type: String
-    },
-    "reccomendedApps.iconUrl": {
-        type: String,
-        regEx: SimpleSchema.RegEx.Url
-    },
-    "reccomendedApps.category": {
-        type: String
-    }
-});
 
 if(Apps.find({}).count() < 1)
 {
@@ -50,6 +10,7 @@ if(Apps.find({}).count() < 1)
             name: "Test " + i,
             developer: "Facebook",
             avgRating: 4.5,
+            rank: i,
             numberOfRatings: 21876696,
             description: `Instantly reach the people in your life—for free. Messenger is just like texting, but you don't have to pay for every message (it works with your data plan).
                                 Not just for Facebook friends: Message people in your phone book and just enter a phone number to add a new contact.
@@ -82,17 +43,14 @@ if(Apps.find({}).count() < 1)
             'reccomendedApps': [
                 {
                     name: "WhatsApp",
-                    category: "Communication",
                     iconUrl: "https://lh6.ggpht.com/mp86vbELnqLi2FzvhiKdPX31_oiTRLNyeK8x4IIrbF5eD1D5RdnVwjQP0hwMNR_JdA=w300-rw"
                 },
                 {
                     name: "Facebook",
-                    category: "Social",
                     iconUrl: "https://lh3.googleusercontent.com/ZZPdzvlpK9r_Df9C3M7j1rNRi7hhHRvPhlklJ3lfi5jk86Jd1s0Y5wcQ1QgbVaAP5Q=w300-rw"
                 },
                 {
                     name: "Viber",
-                    category: "Communication",
                     iconUrl: "https://lh5.ggpht.com/jWKeAZUzPtUqgZdcLDSa7vd3iwdan8QX4nlYlHBMkJHcxwr-uZU40vDmrMKczCmiCBRf=w300-rw"
                 }
             ]

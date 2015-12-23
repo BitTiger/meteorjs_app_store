@@ -1,0 +1,46 @@
+#navTitle {
+    margin-top: 12px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.appIconPreview {
+    width: 50px;
+    height: 50px;
+    padding-left: 3px;
+    margin-top: 2px;
+}
+
+.btn-primary {
+    color: #337ab7;
+    background-color: white;
+    border-color: #337ab7;
+}
+
+.appRank {
+    margin-top: 13px;
+    font-size: 18px;
+}
+
+.getApp {
+    margin-top: 8px;
+}
+
+.mainContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mystar .current-rating {
+    color: #fbd818;
+}
+
+.ratingText {
+    font-size: 10px;
+}
+
+.nameColumn {
+    margin-top: 7px;
+}

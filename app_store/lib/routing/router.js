@@ -6,5 +6,23 @@ Router.configure({
 });
 
 Router.route('/', {
-    name: 'topChart'
+    name: 'topChart',
+    waitOn: function() {
+        Meteor.subscribe('apps');
+    },
+    data: function () {
+        return {
+            apps: Apps.find({})
+        };
+    }
+});
+
+Router.route('/app/:_id', {
+    name: 'appPage',
+    waitOn: function() {
+        Meteor.subscribe('singleApp', this.params._id);
+    },
+    data: function () {
+        return Apps.find({});
+    }
 });

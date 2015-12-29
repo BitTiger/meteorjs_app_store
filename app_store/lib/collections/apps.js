@@ -1,9 +1,45 @@
-/**
- * Created by Steve Kehoe on 11/24/2015.
- */
-
 Apps = new Meteor.Collection('apps');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Schemas.Apps = new SimpleSchema({
     'name': {
         type: String
@@ -42,3 +78,4 @@ Schemas.Apps = new SimpleSchema({
 
 Apps.attachSchema(Schemas.Apps);
 
+*/

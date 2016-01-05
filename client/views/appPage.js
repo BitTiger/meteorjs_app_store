@@ -1,7 +1,3 @@
-/**
- * Created by stevenkehoe on 1/4/16.
- */
-
 Template.appPage.helpers({
     getSuggestedApp: function(appId) {
         Meteor.subscribe('singleAppByAppId', appId);

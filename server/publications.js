@@ -15,7 +15,7 @@ if(Apps.find({}).count() < 11){
 
     var fs = Npm.require('fs');
 
-    fs.readFile('/users/stevenkehoe/documents/meteordev/app_store_class/app_store/server/data.json', 'utf8', Meteor.bindEnvironment(function(err, data) {
+    fs.readFile('../../../../../server/data.json', 'utf8', Meteor.bindEnvironment(function(err, data) {
             if (err) throw err;
             var newAppData = data.split("\n");
 

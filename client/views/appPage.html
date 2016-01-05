@@ -1,8 +1,15 @@
+<template name="suggestedApp">
+    <div class="reccomendedApp">
+        <a href="{{pathFor 'appPage'}}"><img height=50 width=50 src="{{iconUrl}}"/></a>
+        <a href="{{pathFor 'appPage'}}" style="display:block;">{{name}}</a>
+    </div>
+</template>
+
 <template name="appPage">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-brand">
-                    <a href="/"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Top Charts</a>
+                    <a id="backLink"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
             </div>
         </div>
     </nav>
@@ -16,25 +23,25 @@
                 <p class="text-muted">{{developer}}</p>
                 <div class="ratingsArea">
                     {{> starsRating rating=avgRating class='mystar' size='sm'}}
-                    <p class="text-muted ratingText">({{numberOfRatings}})</p>
                 </div>
             </div>
         </div>
         <hr/>
-        <div class="row">
-            <div class="col-xs-12">
-                Customers also like
-            </div>
-        </div>
-        <div class="row" style="overflow-x:auto; margin-top:20px;">
-            {{#each reccomendedApps}}
-                <div class="col-xs-3">
-                    <img height=50 width=50 src="{{iconUrl}}"/>
-                    {{name}}
+        {{#if reccomendedApps}}
+            <div class="row">
+                <div class="col-xs-12">
+                    Customers also like
                 </div>
-            {{/each}}
-        </div>
-        <hr/>
+            </div>
+            <div class="row overflowWrapper">
+                <div class="suggestedAppContainer">
+                    {{#each reccomendedApps}}
+                        {{> suggestedApp getSuggestedApp this}}
+                    {{/each}}
+                </div>
+            </div>
+            <hr/>
+        {{/if}}
         <div class="row">
             <div class="col-xs-12">
                 <strong>Description</strong>

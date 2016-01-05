@@ -65,3 +65,37 @@
     padding-right: 15px;
     margin-top: 10px;
 }
+
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+@media (min-width: 768px){
+    .navbar {
+        border-radius: 4px 4px 0px 0px;
+    }
+}
+
+.suggestedAppContainer {
+    position: absolute;
+    width: 700px;
+    height: 100px;
+}
+
+.reccomendedApp {
+    height: 80px;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.overflowWrapper {
+    overflow-x: auto;
+    position: relative;
+    height: 120px;
+    width: 390px;
+    margin-top: 15px;
+}

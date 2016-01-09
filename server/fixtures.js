@@ -1,4 +1,3 @@
-
 if(Apps.find({}).count() < 1){
 
     var fs = Npm.require('fs');
@@ -18,6 +17,8 @@ if(Apps.find({}).count() < 1){
             newApp.avgRating = parseInt(rawAppData.score) / 2;
             newApp.iconUrl = rawAppData.thumbnail_url;
             newApp.reccomendedApps = rawAppData.top_5_app;
+            newApp.numberOfRecommendations = 0;
+
             Apps.insert(newApp);
         }
 

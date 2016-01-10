@@ -21,6 +21,7 @@ if(Apps.find({}).count() < 1){
 
             Apps.insert(newApp);
         }
+        // Project Assignment code goes here
 
     }, function(err){
         throw err;
